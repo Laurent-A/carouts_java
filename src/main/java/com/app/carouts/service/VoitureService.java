@@ -47,5 +47,10 @@ public class VoitureService {
 		voitureDao.delete(voiture);
 	}
 	
+	@Transactional
+	public void supprimerContratParVoiture(Integer id) {
+		voitureDao.supprimerContratParVoiture(id);
+	}
+	
 
 }

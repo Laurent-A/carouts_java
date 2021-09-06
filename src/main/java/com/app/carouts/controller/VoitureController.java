@@ -47,6 +47,7 @@ public class VoitureController {
 	
 	@DeleteMapping("/voiture/{id}")
 	public ResponseEntity<?> suppressionVoiture(@PathVariable(value = "id") Integer id) {
+		voitureService.supprimerContratParVoiture(id);
 		voitureService.suppressionVoiture(id);
 		return ResponseEntity.ok().build();
 	}
